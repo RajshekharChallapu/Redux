@@ -1,9 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import {combineReducers} from 'redux';
+import BooksReducer from './reducers/reducer_books';
 
-import registerServiceWorker from './registerServiceWorker';
+const rootReducer = combineReducers({books: BooksReducer});
 
-ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+export default rootReducer;
